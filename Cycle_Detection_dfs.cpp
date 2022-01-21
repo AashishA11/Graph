@@ -15,20 +15,16 @@ bool dfs(int node,int par){
         }
     }
     */
+   bool isLoopExists =false;
     for(int child:ar[node])
     {
-        if(vis[child]==0)
-        {
-            if(dfs(child,node)==true)
-            return true;    
-             
-        }
-        else
-        if(child!=par)
-         return true;   
-        }
+        if(vis[child]==1&&child==par) continue;
+        if(vis[child]) return true;   
 
-    return false;
+        isLoopExists|=dfs(child,node);
+        
+    }
+    return isLoopExists;
 }
 int main() {
     int n,m;
@@ -42,7 +38,16 @@ int main() {
          
 
     }
-    cout<<dfs(1,0)<<endl;
+       bool isLoopExists =false;
 
-
+     for(int i=1;i<=n;i++)
+        {
+            if(vis[i]) continue;
+            if(dfs(i,0))
+            {
+              isLoopExists=true;
+            }    
+    }
+    
+   cout<<isLoopExists<<endl;
 }

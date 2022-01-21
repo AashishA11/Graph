@@ -1,0 +1,1 @@
+{"name":"Local: Cycle_Detection_dfs","url":"c:\\Users\\lenovo\\OneDrive\\Desktop\\Graph\\Cycle_Detection_dfs.cpp","tests":[{"id":1641472284197,"input":"8 6\n1 2\n2 3\n2 4\n6 7\n3 5\n1 5","output":"1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\lenovo\\OneDrive\\Desktop\\Graph\\Cycle_Detection_dfs.cpp","group":"local","local":true}

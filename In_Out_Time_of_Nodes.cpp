@@ -23,7 +23,7 @@ bool dfs(int node,int par){
     {
         if(vis[child]==0)
         {
-            dfs(child);
+            dfs(child,node);
         }  
     }
 

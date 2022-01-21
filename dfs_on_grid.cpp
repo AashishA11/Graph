@@ -11,13 +11,22 @@ bool isvalid(int x,int y){
         return false;
     return true;
 }
-void dfs(int x,int y){
+int dfs(int x,int y){
+    int count=1;
     vis[x][y]=1;
-    cout<<x<<" "<<y<<endl;
+    //cout<<x<<" "<<y<<endl;
     for(int i=0;i<4;i++){
-        if(isvalid(x+dx[i],y+dy[i]))
+        if(isvalid(x+dx[i],y+dy[i])){
+          count++;
+
             dfs(x+dx[i],y+dy[i]);
+            //cout<<count<<endl;
+
+ 
+        }
     }
+
+    return count;
 
 }
 /*
@@ -39,6 +48,6 @@ int main()
     //int n, m;
     cin>>n>>m;
  
-    dfs(1,1);
+    cout<<dfs(1,1)<<endl;
 
 }

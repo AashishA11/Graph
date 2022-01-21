@@ -5,7 +5,7 @@ int in[100005];
 vector<int>ar[1000005];
 int low[100005];
 int timer;
-int Find_bridges(int node,int par){
+void Find_bridges(int node,int par){
     vis[node]=1;
     in[node]=low[node]=timer;
     timer++;
